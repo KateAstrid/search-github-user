@@ -1,0 +1,84 @@
+@import '_mixins';
+
+.pageContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30vh;
+  @include mobile {
+    h1 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+}
+
+.searchContainer {
+  position: relative;
+  height: 3rem;
+  display: flex;
+  width: 70%;
+  margin-top: 5rem;
+  gap: 2%;
+  @include mobile {
+    width: 90%;
+    margin-top: 3rem;
+  }
+
+  .input {
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid rgb(188, 186, 186);
+    padding: 1rem;
+    width: 100%;
+    font-family: monospace;
+
+    &:focus {
+      outline-color: #38373758;
+      border: 1px solid #38373758;
+    }
+  }
+}
+
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(121, 121, 121);
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+
+  &:hover {
+    border: 2px solid rgba(57, 57, 57, 0.345);
+    opacity: 1;
+  }
+  @include hoverMobile {
+    border: 1px solid rgb(188, 186, 186);
+    opacity: 0.6;
+  }
+
+  .icon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-image: url(../../public/search_icon.png);
+  }
+}
+
+.additions {
+  margin-top: 2.5rem;
+}
+
+.error {
+  color: #b7180c;
+  font-size: 1rem;
+  line-height: 1;
+}

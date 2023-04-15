@@ -1,0 +1,15 @@
+$mobile: 767px;
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin hoverMobile {
+  @media (hover: none) or (max-width: $mobile) {
+    &:hover {
+      @content;
+    }
+  }
+}

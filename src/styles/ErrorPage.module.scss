@@ -1,0 +1,40 @@
+@import '_mixins';
+
+.pageContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 15% 5%;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 2rem;
+  @include mobile {
+    gap: 1rem;
+  }
+}
+
+.text {
+  color: #282828;
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.backButton {
+  color: #717070;
+  font-size: 1rem;
+  &:hover {
+    color: #282828;
+  }
+}
+
+.icon {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6rem;
+  height: 6rem;
+  background-image: url(../../public/notFound_icon.webp);
+  opacity: 0.8;
+}

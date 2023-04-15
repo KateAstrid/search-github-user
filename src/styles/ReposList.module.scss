@@ -1,0 +1,85 @@
+@import '_mixins';
+
+.statContainer {
+  display: flex;
+  gap: 0.5rem;
+  width: 5rem;
+  @include mobile {
+    width: 4.5rem;
+  }
+}
+
+.repo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.8rem;
+  justify-content: space-between;
+  opacity: 0.7;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+    background-color: rgb(224, 224, 224);
+    text-decoration: underline;
+  }
+  @include hoverMobile {
+    background-color: transparent;
+    text-decoration: none;
+  }
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+.count {
+  color: rgb(98, 96, 96);
+}
+
+.repoStats,
+.repoName {
+  display: flex;
+  gap: 1rem;
+
+  @include mobile {
+    gap: 0;
+  }
+}
+
+.repoName {
+  min-width: 8rem;
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  @include mobile {
+    width: 60%;
+  }
+}
+
+.repoIcon,
+.starsIcon,
+.forkIcon {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.4rem;
+  height: 1.4rem;
+  min-width: 1.4rem;
+  min-height: 1.4rem;
+}
+
+.repoIcon {
+  background-image: url(../../public/repo_icon.png);
+}
+
+.forkIcon {
+  background-image: url(../../public/fork_icon.webp);
+}
+
+.starsIcon {
+  background-image: url(../../public/star_icon.png);
+}

@@ -1,0 +1,64 @@
+@import '_mixins';
+
+.pageContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 5% 15%;
+  flex-direction: column;
+  gap: 2rem;
+  @include mobile {
+    padding: 5%;
+  }
+}
+
+.backButton {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url(../../public/back_icon.png);
+  opacity: 0.5;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.userContainer {
+  display: flex;
+  gap: 5%;
+  width: 100%;
+  align-items: center;
+}
+
+.avatar {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%), 0 -1px 0px rgb(0 0 0 / 2%);
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.statContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.profileLink {
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  color: rgb(98, 96, 96);
+  text-decoration: underline;
+
+  &:hover {
+    color: rgb(0, 0, 0);
+  }
+}
